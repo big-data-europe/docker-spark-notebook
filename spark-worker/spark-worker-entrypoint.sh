@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-export SPARK_VERSION=1.6.1
+export SPARK_VERSION=1.6.2
 export SPARK_HOME=/opt/spark-$SPARK_VERSION
 
 for c in `printenv | perl -sne 'print "$1 " if m/^SPARK_CONF_(.+?)=.*/'`; do 

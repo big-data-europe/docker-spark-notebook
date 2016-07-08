@@ -2,7 +2,7 @@ FROM bde2020/hadoop-base:1.0.0
 MAINTAINER Ivan Ermilov <ivan.s.ermilov@gmail.com>
 
 ENV SPARK_VERSION 1.6.2
-ENV SPARK_URL https://dl.dropboxusercontent.com/u/4882345/packages/spark-1.6.2-bin-hadoop2.6-hive.tgz
+ENV SPARK_URL https://dl.dropboxusercontent.com/u/4882345/packages/spark-1.6.2-bin-without-hadoop.tgz
 RUN set -x \
     && curl -fSL "$SPARK_URL" -o /tmp/spark.tar.gz \
     #&& curl -fSL "$SPARK_URL.asc" -o /tmp/spark.tar.gz.asc \

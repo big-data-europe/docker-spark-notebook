@@ -1,7 +1,7 @@
 FROM bde2020/hadoop-base:1.0.0
 MAINTAINER Ivan Ermilov <ivan.s.ermilov@gmail.com>
 
-ENV APACHE_SPARK_VERSION 1.6.1
+ENV APACHE_SPARK_VERSION 1.6.2
 ENV APACHE_HADOOP_VERSION 2.7.1
 
 RUN set -x \
