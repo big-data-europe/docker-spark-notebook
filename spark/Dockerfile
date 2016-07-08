@@ -1,20 +1,12 @@
 FROM bde2020/hadoop-base:1.0.0
 MAINTAINER Ivan Ermilov <ivan.s.ermilov@gmail.com>
 
-RUN gpg --keyserver pool.sks-keyservers.net --recv-keys \
-    A864F0C3E5262F9A229B85D07B165D2A15E06093 \
-    3E1CBD0F0533D602E80C6E986B32946082667DC1 \
-    9555DAB91FFA8A15D0925B87B1A91F0000799F7E \
-    67B2C95165D2E87617433C3C5D951CFF87FD1A97 \
-    5AA90E72812FF2467904277D548F5FEE9E4FE3AF \
-    EEDABD1C71C548D6F00661D37C6C105FFC8ED089
-
-ENV SPARK_VERSION 1.6.1
-ENV SPARK_URL https://www.apache.org/dist/spark/spark-$SPARK_VERSION/spark-$SPARK_VERSION-bin-without-hadoop.tgz
+ENV SPARK_VERSION 1.6.2
+ENV SPARK_URL https://dl.dropboxusercontent.com/u/4882345/packages/spark-1.6.2-bin-hadoop2.6-hive.tgz
 RUN set -x \
     && curl -fSL "$SPARK_URL" -o /tmp/spark.tar.gz \
-    && curl -fSL "$SPARK_URL.asc" -o /tmp/spark.tar.gz.asc \
-    && gpg --verify /tmp/spark.tar.gz.asc \
+    #&& curl -fSL "$SPARK_URL.asc" -o /tmp/spark.tar.gz.asc \
+    #&& gpg --verify /tmp/spark.tar.gz.asc \
     && tar -xvf /tmp/spark.tar.gz -C /opt/ \
     && rm /tmp/spark.tar.gz*
 

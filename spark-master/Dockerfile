@@ -1,4 +1,4 @@
-FROM earthquakesan/hadoop-spark:1.0.0
+FROM earthquakesan/hadoop-spark:1.6.2-hadoop2.6-hive
 MAINTAINER Ivan Ermilov <ivan.s.ermilov@gmail.com>
 
 ADD spark-master-entrypoint.sh /spark-master-entrypoint.sh
