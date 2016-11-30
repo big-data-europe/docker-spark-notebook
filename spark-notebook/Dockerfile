@@ -1,4 +1,4 @@
-FROM bde2020/hadoop-base:1.0.0-hadoop2.7.1
+FROM bde2020/hadoop-base:1.1.0-hadoop2.7.1-java8
 MAINTAINER Ivan Ermilov <ivan.s.ermilov@gmail.com>
 
 ENV APACHE_SPARK_VERSION 2.0.0
