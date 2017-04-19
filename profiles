@@ -1,0 +1,17 @@
+{
+  "standalone" : {
+    "id" : "Local Spark Cluster",
+    "name" : "Local Spark Cluster",
+    "template" : {
+      "customLocalRepo" : null,
+      "customRepos" : null,
+      "customDeps" : null,
+      "customImports" : null,
+      "customSparkConf" : {
+        "spark.app.name" : "Notebook",
+        "spark.master" : "spark://localhost:7077",
+        "spark.executor.memory" : "5G"
+      }
+    }
+  }
+}
