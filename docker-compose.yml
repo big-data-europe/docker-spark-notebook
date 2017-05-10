@@ -62,9 +62,9 @@ services:
     networks:
       - spark-net
   spark-notebook:
-    build: .
+    build: ./spark-notebook
     ports:
-      - 9001:9001
+      - 9000:9000
     depends_on:
       spark-master:
         condition: service_healthy
